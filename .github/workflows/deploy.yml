@@ -24,7 +24,7 @@ jobs:
         run: ./gradlew build
       
       - name: Transfer jar
-        uses: template/scp-action@main
+        uses: appleboy/scp-action@main
         with:
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
@@ -34,7 +34,7 @@ jobs:
           strip_components: 2
           
       - name : Transfer script
-        uses: template/scp-action@main
+        uses: appleboy/scp-action@main
         with:
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
@@ -44,7 +44,7 @@ jobs:
           strip_components: 1
           
       - name : Execute script
-        uses: template/ssh-action@main
+        uses: appleboy/ssh-action@main
         with:
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
