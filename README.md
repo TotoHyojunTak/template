@@ -1,4 +1,5 @@
 # SpringBoot 기반 Template Framework
+front 없이 API 로만 사용
 
 # Spec
 - SpringBoot 2.7.2
