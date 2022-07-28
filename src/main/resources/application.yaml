@@ -1,10 +1,21 @@
 spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ENC(Z3FG3SGAq8dSaUm0hCWGRe1mxgoSrjpY34D07Y5cYNI=)
+    password: ENC(7uaFtUiMZtg/3zwmjOpht1G4xL1n2nAb)
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://127.0.0.1:3306/test
+    url: ENC(I7NoGBPcxt1r8BxQONR3GtWeHlNVFCIYIziPS72MRyaZVm9OyQWGe9fuVfGEC8wt)
     username: root
     password: root
   jpa:
@@ -28,3 +39,11 @@ logging:
     org.hibernate.SQL: debug
     org.hibernate.type: trace
 
+swagger:
+  base:
+    path: com.fw.template
+
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+    password: A421080gsm

@@ -46,3 +46,8 @@ front 없이 API 로만 사용
 
 # Swagger 3.x 이상 버전에서 실행하는 방법
 - http://localhost:8080/swagger-ui/index.html
+
+
+# Mail 발송 
+- 참고자료 https://velog.io/@jjangchen/스프링부트-메일발송
+- https://earth-95.tistory.com/134

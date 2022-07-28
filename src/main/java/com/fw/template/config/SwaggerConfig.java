@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.Pageable;
@@ -21,13 +22,18 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
+    @Value("${swagger.base.path}")
+    private String basePath;
+
     @Bean
     public Docket api(TypeResolver typeResolver) {
+
+
         return new Docket(DocumentationType.SWAGGER_2)
                 .alternateTypeRules(
                         AlternateTypeRules.newRule(typeResolver.resolve(Pageable.class), typeResolver.resolve(Page.class)))
                 .select() // ApiSelectorBuilder를 생성
-                .apis(RequestHandlerSelectors.basePackage("com.fw.template"))
+                .apis(RequestHandlerSelectors.basePackage(basePath))
                     // api 스펙이 작성되어 있는 패키지를 지정한다. 즉, 컨트롤러가 존재하는 패키지를 basepackage로 지정하여, RequestMapping( GetMapping, PostMapping ... )이 선언된 API를 문서화한다.
                 .paths(PathSelectors.any()) //apis()로 선택된 부분 중 특정 path 조건에 맞는 API들을 다시 필터링하여 문서화
                 .build()
