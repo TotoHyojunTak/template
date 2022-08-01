@@ -1,15 +1,15 @@
 spring:
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: ENC(Z3FG3SGAq8dSaUm0hCWGRe1mxgoSrjpY34D07Y5cYNI=)
-    password: ENC(7uaFtUiMZtg/3zwmjOpht1G4xL1n2nAb)
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: ENC(Z3FG3SGAq8dSaUm0hCWGRe1mxgoSrjpY34D07Y5cYNI=)
+#    password: ENC(7uaFtUiMZtg/3zwmjOpht1G4xL1n2nAb)
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
@@ -25,7 +25,7 @@ spring:
     open-in-view: false
     properties:
       hibernate:
-        show_sql: false
+        show_sql: true
         format_sql: true
         use_sql_comments: true
 

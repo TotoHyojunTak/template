@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 @Api(value="HelloController Swagger", tags = "HelloController")
 @RestController
-public class HelloworldController {
+public class HelloController {
     @GetMapping("/")
     @ApiOperation(value = "helloworld")
     public String helloworld() {

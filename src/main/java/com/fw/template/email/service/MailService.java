@@ -2,17 +2,15 @@ package com.fw.template.email.service;
 
 import com.fw.template.email.dto.MailDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.mail.*;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
 public class MailService {
-    private final JavaMailSender javaMailSender;
+    //private final JavaMailSender javaMailSender;
 
     public void sendMail(MailDto dto) {
-        try {
+        /*try {
             SimpleMailMessage message = new SimpleMailMessage();
             message.setTo(dto.getReceiver());
             message.setFrom(dto.getSender());
@@ -27,6 +25,6 @@ public class MailService {
             e.printStackTrace();
         } catch (MailException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }
